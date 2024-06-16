@@ -1,12 +1,29 @@
 <resources>
     <string name="app_name">LiveMusicNowApp</string>
 
+    <!-- Menu Button Text -->
     <string name="btn_text_home">Home</string>
     <string name="btn_text_entry">Add Gig</string>
     <string name="btn_text_map">Map</string>
     <string name="btn_text_settings">Settings</string>
 
+    <!-- Activity Placeholder Text -->
+    <string name="plhdr_home">Home Coming Soon! Please Navigate to Add Gig.</string>
     <string name="plhdr_entry">Gigs Coming Soon!</string>
     <string name="plhdr_map">Map Coming Soon!</string>
     <string name="plhdr_settings">Settings Coming Soon!</string>
+
+    <!-- Add Gig Text -->
+    <string name="lbl_entry_name">Band Name</string>
+    <string name="lbl_entry_band_link">Band Link</string>
+    <string name="lbl_entry_genre">Genre</string>
+    <string name="lbl_entry_desc">Description</string>
+    <string name="lbl_entry_date">Date</string>
+    <string name="lbl_entry_time">Time</string>
+    <string name="lbl_entry_venue">Venue</string>
+    <string name="lbl_entry_venue_link">Venue Link</string>
+    <string name="lbl_entry_tickets">Ticket Starting Price</string>
+    <string name="lbl_entry_tickets_link">Ticket Link</string>
+    <string name="lbl_entry_logo">Logo</string>
+    <string name="lbl_entry_logo_link">Logo Link</string>
 </resources>
