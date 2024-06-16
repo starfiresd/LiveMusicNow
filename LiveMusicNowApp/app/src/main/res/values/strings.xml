@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">LiveMusicNowApp</string>
+
+    <string name="btn_text_home">Home</string>
+    <string name="btn_text_entry">Add Gig</string>
+    <string name="btn_text_map">Map</string>
+    <string name="btn_text_settings">Settings</string>
+
+    <string name="plhdr_entry">Gigs Coming Soon!</string>
+    <string name="plhdr_map">Map Coming Soon!</string>
+    <string name="plhdr_settings">Settings Coming Soon!</string>
 </resources>
