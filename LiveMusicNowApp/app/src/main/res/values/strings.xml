@@ -21,6 +21,10 @@
     <string name="lbl_entry_date">Date</string>
     <string name="lbl_entry_time">Time</string>
     <string name="lbl_entry_venue">Venue</string>
+    <string name="lbl_entry_venue_addr">Venue Address</string>
+    <string name="lbl_entry_venue_city">City</string>
+    <string name="lbl_entry_venue_state">State</string>
+    <string name="lbl_entry_venue_zip">Zip Code</string>
     <string name="lbl_entry_venue_link">Venue Link</string>
     <string name="lbl_entry_tickets">Ticket Starting Price</string>
     <string name="lbl_entry_tickets_link">Ticket Link</string>
