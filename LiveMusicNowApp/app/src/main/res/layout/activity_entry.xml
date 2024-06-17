@@ -117,6 +117,56 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
 
     <EditText
+        android:id="@+id/editTextVenueAddress"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:ems="250"
+        android:inputType="text"
+        android:text="@string/lbl_entry_venue_addr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVenue" />
+
+    <EditText
+        android:id="@+id/editTextVenueCity"
+        android:layout_width="175dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:ems="250"
+        android:inputType="textPostalAddress"
+        android:text="@string/lbl_entry_venue_city"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVenueAddress" />
+
+    <EditText
+        android:id="@+id/editTextVenueState"
+        android:layout_width="50dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="11dp"
+        android:ems="2"
+        android:inputType="textPostalAddress"
+        android:text="@string/lbl_entry_venue_state"
+        app:layout_constraintEnd_toStartOf="@+id/editTextVenueZip"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVenueAddress" />
+
+    <EditText
+        android:id="@+id/editTextVenueZip"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="45dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:text="@string/lbl_entry_venue_zip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextVenueAddress" />
+
+    <EditText
         android:id="@+id/editTextVenueLink"
         android:layout_width="350dp"
         android:layout_height="40dp"
@@ -128,7 +178,7 @@
         android:text="@string/lbl_entry_venue_link"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextVenue" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextVenueZip" />
 
     <EditText
         android:id="@+id/editTextTickets"
@@ -158,19 +208,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTickets" />
 
-    <EditText
-        android:id="@+id/editTextLogo"
-        android:layout_width="350dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="30dp"
-        android:ems="250"
-        android:inputType="text"
-        android:text="@string/lbl_entry_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTicketsLink" />
+<!--    <EditText-->
+<!--        android:id="@+id/editTextLogo"-->
+<!--        android:layout_width="350dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:ems="250"-->
+<!--        android:inputType="text"-->
+<!--        android:text="@string/lbl_entry_logo"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTicketsLink" />-->
 
     <EditText
         android:id="@+id/editTextLogoLink"
@@ -184,7 +234,7 @@
         android:text="@string/lbl_entry_logo_link"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLogo" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTicketsLink" />
 
     <LinearLayout
         android:layout_width="410dp"
