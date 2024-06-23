@@ -67,7 +67,7 @@ public class Event {
         return time;
     }
     public void setTime(String time) {
-        this.date = time;
+        this.time = time;
     }
 
     public String getVenue(){
