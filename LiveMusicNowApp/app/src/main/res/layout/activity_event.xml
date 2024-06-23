@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EntryActivity">
+    tools:context=".EventActivity">
 
-    <Switch
+    <ToggleButton
         android:id="@+id/switchActive"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="182dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="182dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,7 @@
         android:layout_marginEnd="30dp"
         android:ems="250"
         android:inputType="text"
-        android:text="@string/lbl_entry_name"
+        android:text="@string/lbl_event_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switchActive" />
@@ -37,11 +37,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="500"
         android:inputType="text"
-        android:text="@string/lbl_entry_band_link"
+        android:text="@string/lbl_event_band_link"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextBandName" />
@@ -51,11 +51,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="500"
         android:inputType="text"
-        android:text="@string/lbl_entry_genre"
+        android:text="@string/lbl_event_genre"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextBandLink" />
@@ -65,11 +65,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="250"
         android:inputType="text"
-        android:text="@string/lbl_entry_desc"
+        android:text="@string/lbl_event_desc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextGenre" />
@@ -79,10 +79,10 @@
         android:layout_width="150dp"
         android:layout_height="40dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:ems="50"
         android:inputType="date"
-        android:text="@string/lbl_entry_date"
+        android:text="@string/lbl_event_date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,11 +92,11 @@
         android:id="@+id/editTextTime"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="45dp"
         android:ems="50"
         android:inputType="time"
-        android:text="@string/lbl_entry_time"
+        android:text="@string/lbl_event_time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.987"
         app:layout_constraintStart_toStartOf="parent"
@@ -107,11 +107,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="250"
         android:inputType="text"
-        android:text="@string/lbl_entry_venue"
+        android:text="@string/lbl_event_venue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime" />
@@ -121,11 +121,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="250"
         android:inputType="text"
-        android:text="@string/lbl_entry_venue_addr"
+        android:text="@string/lbl_event_venue_addr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextVenue" />
@@ -135,10 +135,10 @@
         android:layout_width="175dp"
         android:layout_height="40dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:ems="250"
         android:inputType="textPostalAddress"
-        android:text="@string/lbl_entry_venue_city"
+        android:text="@string/lbl_event_venue_city"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextVenueAddress" />
 
@@ -146,11 +146,11 @@
         android:id="@+id/editTextVenueState"
         android:layout_width="50dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="11dp"
         android:ems="2"
         android:inputType="textPostalAddress"
-        android:text="@string/lbl_entry_venue_state"
+        android:text="@string/lbl_event_venue_state"
         app:layout_constraintEnd_toStartOf="@+id/editTextVenueZip"
         app:layout_constraintTop_toBottomOf="@+id/editTextVenueAddress" />
 
@@ -158,11 +158,11 @@
         android:id="@+id/editTextVenueZip"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="45dp"
         android:ems="10"
         android:inputType="textPostalAddress"
-        android:text="@string/lbl_entry_venue_zip"
+        android:text="@string/lbl_event_venue_zip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextVenueAddress" />
 
@@ -171,11 +171,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="500"
         android:inputType="text"
-        android:text="@string/lbl_entry_venue_link"
+        android:text="@string/lbl_event_venue_link"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextVenueZip" />
@@ -185,11 +185,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="250"
         android:inputType="numberDecimal"
-        android:text="@string/lbl_entry_tickets"
+        android:text="@string/lbl_event_tickets"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextVenueLink" />
@@ -199,11 +199,11 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="500"
         android:inputType="text"
-        android:text="@string/lbl_entry_tickets_link"
+        android:text="@string/lbl_event_tickets_link"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTickets" />
@@ -217,7 +217,7 @@
 <!--        android:layout_marginEnd="30dp"-->
 <!--        android:ems="250"-->
 <!--        android:inputType="text"-->
-<!--        android:text="@string/lbl_entry_logo"-->
+<!--        android:text="@string/lbl_event_logo"-->
 <!--        app:layout_constraintEnd_toEndOf="parent"-->
 <!--        app:layout_constraintStart_toStartOf="parent"-->
 <!--        app:layout_constraintTop_toBottomOf="@+id/editTextTicketsLink" />-->
@@ -227,14 +227,26 @@
         android:layout_width="350dp"
         android:layout_height="40dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="30dp"
         android:ems="500"
         android:inputType="text"
-        android:text="@string/lbl_entry_logo_link"
+        android:text="@string/lbl_event_logo_link"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTicketsLink" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/btn_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogoLink" />
 
     <LinearLayout
         android:layout_width="410dp"
@@ -252,18 +264,25 @@
             android:text="@string/btn_text_home" />
 
         <Button
-            android:id="@+id/btn_main_entry"
+            android:id="@+id/btn_main_event"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_text_entry" />
+            android:text="@string/btn_text_event" />
 
         <Button
-            android:id="@+id/btn_main_map"
+            android:id="@+id/btn_main_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_text_map" />
+            android:text="@string/btn_text_list" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_main_map"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="@string/btn_text_map" />-->
 
         <Button
             android:id="@+id/btn_main_settings"

@@ -1,51 +1,61 @@
 package com.example.livemusicnowapp;
 
-import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
+import android.database.SQLException;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import java.util.ArrayList;
 
-public class EntryActivity extends AppCompatActivity {
+public class EventListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_entry);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        setContentView(R.layout.activity_event_list);
         initHomeButton();
-        initEntryButton();
+        initEventButton();
         initMapButton();
         initSettingsButton();
+        EventsDataSource ds = new EventsDataSource(this);
+        ArrayList<String> bands;
+        try {
+            ds.open();
+            bands = ds.getEventBand();
+            ds.close();
+            RecyclerView bandList = findViewById(R.id.rvBands);
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
+            bandList.setLayoutManager(layoutManager);
+            EventAdapter textbookAdapter = new EventAdapter(bands);
+            bandList.setAdapter(textbookAdapter);
+        } catch (SQLException e) {
+            Toast.makeText(this, "Error retrieving bands", Toast.LENGTH_LONG).show();
+        }
     }
-
     private void initHomeButton(){
         Button button = findViewById(R.id.btn_main_home);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EntryActivity.this, MainActivity.class);
+                Intent intent = new Intent(EventListActivity.this, MainActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
     }
-    private void initEntryButton(){
-        Button button = findViewById(R.id.btn_main_entry);
+    private void initEventButton(){
+        Button button = findViewById(R.id.btn_main_event);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EntryActivity.this, EntryActivity.class);
+                Intent intent = new Intent(EventListActivity.this, EventActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -56,7 +66,7 @@ public class EntryActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EntryActivity.this, MapActivity.class);
+                Intent intent = new Intent(EventListActivity.this, MapActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
@@ -67,7 +77,7 @@ public class EntryActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(EntryActivity.this, SettingsActivity.class);
+                Intent intent = new Intent(EventListActivity.this, SettingsActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }

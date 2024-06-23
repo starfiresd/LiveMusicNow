@@ -24,7 +24,7 @@ public class MapActivity extends AppCompatActivity {
             return insets;
         });
         initHomeButton();
-        initEntryButton();
+        initEventButton();
         initMapButton();
         initSettingsButton();
     }
@@ -40,12 +40,12 @@ public class MapActivity extends AppCompatActivity {
             }
         });
     }
-    private void initEntryButton(){
-        Button button = findViewById(R.id.btn_main_entry);
+    private void initEventButton(){
+        Button button = findViewById(R.id.btn_main_event);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MapActivity.this, EntryActivity.class);
+                Intent intent = new Intent(MapActivity.this, EventActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
