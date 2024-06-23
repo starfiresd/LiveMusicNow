@@ -50,7 +50,8 @@ public class EventActivity extends AppCompatActivity {
         initToggleButton();
         initHomeButton();
         initEventButton();
-        initMapButton();
+        initEventsListButton();
+        //initMapButton();
         initSettingsButton();
     }
 
@@ -479,6 +480,17 @@ public class EventActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventActivity.this, EventActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+    private void initEventsListButton(){
+        Button button = findViewById(R.id.btn_main_list);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventActivity.this, EventListActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
