@@ -1,33 +1,37 @@
 <resources>
     <string name="app_name">LiveMusicNowApp</string>
 
+    <!-- Helpers -->
+    <string name="lbl_item_view">Band View</string>
+
     <!-- Menu Button Text -->
     <string name="btn_text_home">Home</string>
-    <string name="btn_text_entry">Add Gig</string>
+    <string name="btn_text_event">Add Gig</string>
     <string name="btn_text_map">Map</string>
     <string name="btn_text_settings">Settings</string>
 
     <!-- Activity Placeholder Text -->
     <string name="plhdr_home">Home Coming Soon! Please Navigate to Add Gig.</string>
-    <string name="plhdr_entry">Gigs Coming Soon!</string>
+    <string name="plhdr_event">Gigs Coming Soon!</string>
     <string name="plhdr_map">Map Coming Soon!</string>
     <string name="plhdr_settings">Settings Coming Soon!</string>
 
     <!-- Add Gig Text -->
-    <string name="lbl_entry_name">Band Name</string>
-    <string name="lbl_entry_band_link">Band Link</string>
-    <string name="lbl_entry_genre">Genre</string>
-    <string name="lbl_entry_desc">Description</string>
-    <string name="lbl_entry_date">Date</string>
-    <string name="lbl_entry_time">Time</string>
-    <string name="lbl_entry_venue">Venue</string>
-    <string name="lbl_entry_venue_addr">Venue Address</string>
-    <string name="lbl_entry_venue_city">City</string>
-    <string name="lbl_entry_venue_state">State</string>
-    <string name="lbl_entry_venue_zip">Zip Code</string>
-    <string name="lbl_entry_venue_link">Venue Link</string>
-    <string name="lbl_entry_tickets">Ticket Starting Price</string>
-    <string name="lbl_entry_tickets_link">Ticket Link</string>
-    <string name="lbl_entry_logo">Logo</string>
-    <string name="lbl_entry_logo_link">Logo Link</string>
+    <string name="lbl_event_name">Band Name</string>
+    <string name="lbl_event_band_link">Band Link</string>
+    <string name="lbl_event_genre">Genre</string>
+    <string name="lbl_event_desc">Description</string>
+    <string name="lbl_event_date">Date</string>
+    <string name="lbl_event_time">Time</string>
+    <string name="lbl_event_venue">Venue</string>
+    <string name="lbl_event_venue_addr">Venue Address</string>
+    <string name="lbl_event_venue_city">City</string>
+    <string name="lbl_event_venue_state">State</string>
+    <string name="lbl_event_venue_zip">Zip Code</string>
+    <string name="lbl_event_venue_link">Venue Link</string>
+    <string name="lbl_event_tickets">Ticket Starting Price</string>
+    <string name="lbl_event_tickets_link">Ticket Link</string>
+    <string name="lbl_event_logo">Logo</string>
+    <string name="lbl_event_logo_link">Logo Link</string>
+    <string name="btn_save">Save Event</string>
 </resources>

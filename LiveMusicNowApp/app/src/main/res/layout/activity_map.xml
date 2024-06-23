@@ -33,11 +33,11 @@
             android:text="@string/btn_text_home" />
 
         <Button
-            android:id="@+id/btn_main_entry"
+            android:id="@+id/btn_main_event"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/btn_text_entry" />
+            android:text="@string/btn_text_event" />
 
         <Button
             android:id="@+id/btn_main_map"
