@@ -33,8 +33,8 @@ public class EventListActivity extends AppCompatActivity {
             RecyclerView bandList = findViewById(R.id.rvBands);
             RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
             bandList.setLayoutManager(layoutManager);
-            EventAdapter textbookAdapter = new EventAdapter(bands);
-            bandList.setAdapter(textbookAdapter);
+            EventAdapter eventAdapter = new EventAdapter(bands);
+            bandList.setAdapter(eventAdapter);
         } catch (SQLException e) {
             Toast.makeText(this, "Error retrieving bands", Toast.LENGTH_LONG).show();
         }

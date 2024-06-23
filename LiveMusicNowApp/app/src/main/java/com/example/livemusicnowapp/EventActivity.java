@@ -48,6 +48,7 @@ public class EventActivity extends AppCompatActivity {
 
         initTextChangedEvents();
         initToggleButton();
+        initSaveButton();
         initHomeButton();
         initEventButton();
         initEventsListButton();
@@ -62,7 +63,7 @@ public class EventActivity extends AppCompatActivity {
     }
 
     private void setForEditing(boolean enabled) {
-        EditText editBand = findViewById(R.id.editTextBandLink);
+        EditText editBand = findViewById(R.id.editTextBandName);
         editBand.setEnabled(enabled);
         EditText editBandLink = findViewById(R.id.editTextBandLink);
         editBandLink.setEnabled(enabled);
@@ -97,6 +98,7 @@ public class EventActivity extends AppCompatActivity {
             editBand.requestFocus();
         } else {
             // *********************** NEED TO FIND ALTERNATIVE FOR THIS ****************************
+            editLogoLink.requestFocus();
             //ScrollView s = findViewById(R.id.controlsScrollView);
             //s.fullScroll(ScrollView.FOCUS_UP);
         }
@@ -360,7 +362,7 @@ public class EventActivity extends AppCompatActivity {
             EventsDataSource ds = new EventsDataSource(EventActivity.this);
             try {
                 ds.open();
-                /*The current textbook id is compared to -1. If -1 this is a new record,
+                /*The current event id is compared to -1. If -1 this is a new record,
                  * otherwise it is an existing record. If new you implement insert method,
                  * else update methods*/
                 if (currentEvent.getEventID() == - 1) {
@@ -417,11 +419,11 @@ public class EventActivity extends AppCompatActivity {
         EditText editLogoLink = findViewById(R.id.editTextLogoLink);
         imm.hideSoftInputFromWindow(editLogoLink.getWindowToken(), 0);
     }
-    private void initEvent(int id) { /*The id here is the textbookId*/
+    private void initEvent(int id) { /*The id here is the eventId*/
         EventsDataSource eventsDataSource  = new EventsDataSource(EventActivity.this);
         try {
             eventsDataSource.open();
-            /*Get textbook data and enter it into currentEvent*/
+            /*Get event data and enter it into currentEvent*/
             currentEvent = eventsDataSource.getSpecificEvent(id);
             eventsDataSource.close();
         } catch (SQLException e) {
@@ -443,7 +445,6 @@ public class EventActivity extends AppCompatActivity {
         EditText editTicketPrice = findViewById(R.id.editTextTickets);
         EditText editTicketLink = findViewById(R.id.editTextTicketsLink);
         EditText editLogoLink = findViewById(R.id.editTextLogoLink);
-
 
         /*Widgets are set to display the values of the selected textbook*/
         editBand.setText(currentEvent.getBandName());
