@@ -7,11 +7,11 @@ import android.util.Log;
 
 public class EventsDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "livemusicnow.db";
-    private static final int DATABASE_VERSION = 4;
+    private static final int DATABASE_VERSION = 1;
 
     /*Database creation SQL statement*/
     private static final String CREATE_TABLE_EVENTS =
-            "create table events (_id integer primary key autoincrement, "
+            "create table event (_id integer primary key autoincrement, "
                     + "band text not null, "
                     + "bandLink text not null, "
                     + "genre text not null, "

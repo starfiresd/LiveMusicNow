@@ -11,6 +11,9 @@
     <string name="btn_text_map">Map</string>
     <string name="btn_text_settings">Settings</string>
 
+    <!-- Event List Button Text -->
+    <string name="btn_text_delete">Delete</string>
+
     <!-- Activity Placeholder Text -->
     <string name="plhdr_home">Home Coming Soon! Please Navigate to Add Gig.</string>
     <string name="plhdr_event">Gigs Coming Soon!</string>

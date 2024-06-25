@@ -22,7 +22,8 @@ public class EventListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_event_list);
         initHomeButton();
         initEventButton();
-        initMapButton();
+        initEventsListButton();
+        //initMapButton();
         initSettingsButton();
         EventsDataSource ds = new EventsDataSource(this);
         ArrayList<String> bands;
@@ -56,6 +57,17 @@ public class EventListActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventListActivity.this, EventActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+    }
+    private void initEventsListButton(){
+        Button button = findViewById(R.id.btn_main_list);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventListActivity.this, EventListActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
