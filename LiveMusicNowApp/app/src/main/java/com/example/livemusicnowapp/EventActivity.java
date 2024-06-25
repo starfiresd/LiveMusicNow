@@ -97,10 +97,8 @@ public class EventActivity extends AppCompatActivity {
         if (enabled) {
             editBand.requestFocus();
         } else {
-            // *********************** NEED TO FIND ALTERNATIVE FOR THIS ****************************
-            editLogoLink.requestFocus();
-            //ScrollView s = findViewById(R.id.controlsScrollView);
-            //s.fullScroll(ScrollView.FOCUS_UP);
+            ScrollView s = findViewById(R.id.controlsScrollView);
+            s.fullScroll(ScrollView.FOCUS_UP);
         }
     }
     public void initTextChangedEvents() {

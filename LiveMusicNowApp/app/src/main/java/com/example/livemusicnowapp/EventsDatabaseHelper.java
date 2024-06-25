@@ -7,7 +7,7 @@ import android.util.Log;
 
 public class EventsDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "livemusicnow.db";
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 1;
 
     /*Database creation SQL statement*/
     private static final String CREATE_TABLE_EVENTS =
