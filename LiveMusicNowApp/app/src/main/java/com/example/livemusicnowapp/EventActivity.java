@@ -186,7 +186,7 @@ public class EventActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable editable) {
-                currentEvent.setDescription(etDate.getText().toString());
+                currentEvent.setDate(etDate.getText().toString());
             }
         });
 

@@ -17,7 +17,7 @@ public class EventsDataSource {
     }
     public void open() throws SQLException {
         database = dbHelper.getWritableDatabase();
-        dbHelper.onCreate(database); //added to fix table not existing error - creates table already exists error now
+        //dbHelper.onCreate(database); //added to fix table not existing error - creates table already exists error now
     }
     public void close(){
         dbHelper.close();
