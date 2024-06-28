@@ -12,6 +12,7 @@
     <string name="btn_text_settings">Settings</string>
 
     <!-- Event List Button Text -->
+    <string name="btn_text_edit">Edit</string>
     <string name="btn_text_delete">Delete</string>
 
     <!-- Activity Placeholder Text -->

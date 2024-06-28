@@ -42,6 +42,7 @@ public class EventAdapter extends RecyclerView.Adapter{
         EventViewHolder tvh = (EventViewHolder) holder;
         tvh.getEventTextView().setText(eventData.get(position));
         //tvh.getDescriptionTextView().setText(eventData.get(position));
+
     }
 
     @Override
